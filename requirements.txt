@@ -1,0 +1,26 @@
+# =========================================================
+# Wafer Defect Detection System - Required Dependencies
+# =========================================================
+
+# ⚠️ CRITICAL GPU INSTRUCTION ⚠️
+# If you run `pip install -r requirements.txt`, pip will automatically install
+# the CPU-only version of PyTorch. To train using your NVIDIA GPU, you MUST
+# install PyTorch manually by running this exact command FIRST:
+# 
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+# 
+# After you install the GPU version of Torch, you can safely install the rest below.
+
+# Model Architecture and Training Platform
+ultralytics>=8.3.0
+wandb>=0.15.0
+
+# Advanced Scientific Operations
+numpy>=1.24.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+
+# Additional Image & Configuration Handlers
+opencv-python>=4.8.0
+pillow>=10.0.0
+pyyaml>=6.0
