@@ -63,7 +63,8 @@ pip install -r requirements.txt
 
 This project utilizes the custom `etching-defect-class-3` wafer dataset. To process detections or reproduce the training loops here, you must download the dataset and place it in the `dataset/` directory.
 
-> 🔗 **[View & Download the Dataset on Roboflow](https://universe.roboflow.com/search?q=etching-defect-class-3)**  
+> 🔗 **[View & Download the Dataset on Roboflow](https://universe.roboflow.com/search?q=etching-defect-class-3)**
+> Download the sample video (video4) from YouTube via (https://youtu.be/LenLCRIkb0A)
 > *(Note: Ensure you export the dataset in YOLO format. After downloading, extract the ZIP contents directly into `Wafer Defect detection system/dataset/`)*
 
 ---
