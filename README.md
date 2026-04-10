@@ -59,7 +59,16 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Step 2: How to Train a Model
+## 📥 Step 2: Download the Dataset (Roboflow)
+
+This project utilizes the custom `etching-defect-class-3` wafer dataset. To process detections or reproduce the training loops here, you must download the dataset and place it in the `dataset/` directory.
+
+> 🔗 **[View & Download the Dataset on Roboflow](https://universe.roboflow.com/search?q=etching-defect-class-3)**  
+> *(Note: Ensure you export the dataset in YOLO format. After downloading, extract the ZIP contents directly into `Wafer Defect detection system/dataset/`)*
+
+---
+
+## 🚀 Step 3: How to Train a Model
 
 Use `train.py` to train new models. The system automatically routes all loss curves, graphs, and new model weights into `runs/train/[run_name]/weights/best.pt`. Once completed, it natively routes the validation summaries to `runs/results/summary/`.
 
@@ -75,7 +84,7 @@ python train.py --version 11 --size m --epochs 200 --batch 8 --mixup 0.15 --degr
 
 ---
 
-## 📼 Step 3: Run Predictions on Prerecorded Video
+## 📼 Step 4: Run Predictions on Prerecorded Video
 
 To analyze an existing video (like `dataset/Video/video4.mp4`), use `predict.py` and point it to the `best.pt` file generated during your training. The script will automatically intercept the output and save your newly drawn bounding-box video nicely into `runs/results/video/`.
 
@@ -86,7 +95,7 @@ python predict.py --source dataset/Video/video4.mp4 --weights runs/train/yolov11
 
 ---
 
-## 🎥 Step 4: Run Live Camera Detection
+## 🎥 Step 5: Run Live Camera Detection
 
 Use `camera.py` for real-time webcam inference. You can configure it to automatically capture screenshots whenever it spots a defect or record a continuous video. Files are smartly routed to `runs/results/live detection/`.
 
